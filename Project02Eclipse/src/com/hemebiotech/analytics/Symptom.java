@@ -2,8 +2,9 @@ package com.hemebiotech.analytics;
 
 /**
  * This object is used to represent and count the symptoms that will be encountered in the text file
+ * implements Comparable in order for us to be able to sort them in ascending order
  */
-public class Symptom {
+public class Symptom implements Comparable{
 
     private String name; //The name of the symptom
 
@@ -39,4 +40,9 @@ public class Symptom {
         this.occurrences++;
     }
 
+    @Override
+    public int compareTo(Object o) {
+        Symptom test = (Symptom) o;
+        return this.getName().compareTo(test.getName());
+    }
 }
