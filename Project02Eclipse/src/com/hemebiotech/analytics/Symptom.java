@@ -10,14 +10,6 @@ public class Symptom implements Comparable{
 
     private int occurrences; //The number of time the symptom appears
 
-    public void setName (String name){
-        this.name = name;
-    }
-
-    public void setOccurrences (int occurrences){
-        this.occurrences = occurrences;
-    }
-
     public String getName (){
         return this.name;
     }
@@ -29,11 +21,6 @@ public class Symptom implements Comparable{
     public Symptom (String name){
         this.name = name;
         this.occurrences = 1;
-    }
-
-    public Symptom (String name, int occurrences){
-        this.name = name;
-        this.occurrences = occurrences;
     }
 
     public void addOneOccurrence (){
