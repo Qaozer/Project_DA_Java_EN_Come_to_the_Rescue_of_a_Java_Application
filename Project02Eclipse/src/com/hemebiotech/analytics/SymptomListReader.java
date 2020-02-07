@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class SymptomListReader {
                 line = reader.readLine();
             }
             reader.close();
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         Collections.sort(result);

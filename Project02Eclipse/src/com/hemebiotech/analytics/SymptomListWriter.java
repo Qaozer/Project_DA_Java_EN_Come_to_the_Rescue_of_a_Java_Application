@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class SymptomListWriter {
 
-    private final String TARGET = "result.txt";
+    private final String TARGET = "result.out";
     private List<Symptom> symptomsList;
 
     public SymptomListWriter(List<Symptom> symptomsList){
