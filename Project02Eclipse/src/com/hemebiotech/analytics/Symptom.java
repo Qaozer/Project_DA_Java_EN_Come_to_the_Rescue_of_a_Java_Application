@@ -23,10 +23,18 @@ public class Symptom implements Comparable{
         this.occurrences = 1;
     }
 
+    /**
+     * This methods increments by one the number of occurrences of the symptom
+     */
     public void addOneOccurrence (){
         this.occurrences++;
     }
 
+    /**
+     * This methods allows us to sort two symptoms in alphabetical order
+     * @param o is the second symptom
+     * @return an integer used by Collections.sort()
+     */
     @Override
     public int compareTo(Object o) {
         Symptom test = (Symptom) o;

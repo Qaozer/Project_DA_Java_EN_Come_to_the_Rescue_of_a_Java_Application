@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Handles the writing of the list into a file
+ * This class defines the methods to write an ArrayList of symptoms into a file.
  */
 public class SymptomListWriter {
 
@@ -17,16 +17,17 @@ public class SymptomListWriter {
         this.symptomsList = symptomsList;
     }
 
+    /**
+     * This method writes the symptomsList to the TARGET
+     */
     public void writeToFile(){
         Symptom next;
         Iterator<Symptom> iterator = this.symptomsList.iterator();
-        try {
-            FileWriter writer = new FileWriter(TARGET);
+        try (FileWriter writer = new FileWriter(TARGET)){
             while (iterator.hasNext()){
                 next = iterator.next();
                 writer.write(next.getName()+" = "+next.getOccurrences()+"\n");
             }
-            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
