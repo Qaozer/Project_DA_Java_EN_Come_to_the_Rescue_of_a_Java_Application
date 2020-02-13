@@ -9,13 +9,14 @@ import java.util.Optional;
 /**
  * This class defines the methods used to count the symptoms and sort them.
  */
-public class AnalyticsCounter {
+public class AnalyticsCounter implements IAnalyticsCounter {
 
 	/**
 	 * This method builds a list of symptoms and their occurrences
 	 * @param reader a buffered reader from a text file containing a list of symptoms
 	 * @return an ArrayList of symptoms and their occurrences, in first appearing order.
 	 */
+	@Override
 	public ArrayList<Symptom> count(BufferedReader reader){
 		ArrayList<Symptom> result = new ArrayList<>();
 		Optional<Symptom> checker;
@@ -43,6 +44,7 @@ public class AnalyticsCounter {
 	 * This methods is used to sort an ArrayList of symptoms alphabetically
 	 * @param symptomsList the ArrayList to be sorted
 	 */
+	@Override
 	public void sort(ArrayList<Symptom> symptomsList){
 		Collections.sort(symptomsList);
 	}
