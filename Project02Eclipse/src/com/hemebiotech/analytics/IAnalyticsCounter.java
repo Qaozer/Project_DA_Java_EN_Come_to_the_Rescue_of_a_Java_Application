@@ -17,4 +17,11 @@ public interface IAnalyticsCounter {
      * This method is used to sort an ArrayList of symptoms
      */
     void sort(ArrayList<Symptom> symptomsList);
+
+    /**
+     * This method is used to define how the symptoms are added together
+     * @param Line current line frome a BufferedReader
+     * @param list an ArrayList of symptoms to be updated
+     */
+    void add(String Line, ArrayList<Symptom> list);
 }

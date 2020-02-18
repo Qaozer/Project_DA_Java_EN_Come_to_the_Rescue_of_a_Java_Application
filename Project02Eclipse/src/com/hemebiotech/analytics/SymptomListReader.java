@@ -28,7 +28,7 @@ public class SymptomListReader implements ISymptomListReader{
     @Override
     public List<Symptom> getSymptomsList(){
         ArrayList<Symptom> result = new ArrayList<>();
-        AnalyticsCounter analyticsCounter = new AnalyticsCounter();
+        IAnalyticsCounter analyticsCounter = new AnalyticsCounter();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             result = analyticsCounter.count(reader);

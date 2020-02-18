@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * This class defines the methods to write an ArrayList of symptoms into a file.
  */
-public class SymptomListWriter {
+public class SymptomListWriter implements ISymptomListWriter{
 
     private final String TARGET = "result.out";
     private List<Symptom> symptomsList;
@@ -20,6 +20,7 @@ public class SymptomListWriter {
     /**
      * This method writes the symptomsList to the TARGET
      */
+    @Override
     public void writeToFile(){
         Symptom next;
         Iterator<Symptom> iterator = this.symptomsList.iterator();
