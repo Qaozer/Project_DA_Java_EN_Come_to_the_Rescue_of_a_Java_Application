@@ -1,4 +1,6 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.writer;
+
+import com.hemebiotech.analytics.Symptom;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,7 +10,7 @@ import java.util.List;
 /**
  * This class defines the methods to write an ArrayList of symptoms into a file.
  */
-public class SymptomListWriter implements ISymptomListWriter{
+public class SymptomListWriter implements ISymptomListWriter {
 
     private final String TARGET = "result.out";
     private List<Symptom> symptomsList;

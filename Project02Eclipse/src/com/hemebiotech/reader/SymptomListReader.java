@@ -1,18 +1,19 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.reader;
+
+import com.hemebiotech.analytics.AnalyticsCounter;
+import com.hemebiotech.analytics.IAnalyticsCounter;
+import com.hemebiotech.analytics.Symptom;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * This class contains the method used to read a symptom list from a text file
  */
-public class SymptomListReader implements ISymptomListReader{
+public class SymptomListReader implements ISymptomListReader {
 
     private String filePath;
 

@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.writer;
 
 /**
  * Anything related to the way the output is written
